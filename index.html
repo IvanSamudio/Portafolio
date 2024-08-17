@@ -7,6 +7,16 @@
 
     <title>Portafolio Personal</title>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var base = document.createElement('base');
+            base.href = window.location.href ;
+            console.log(window.location);
+            base.target = '_self';
+            document.head.appendChild(base);
+        });
+    </script>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
     <link rel="stylesheet" href="/assets/vendor/bootstrap/CSS/bootstrap.min.css">
