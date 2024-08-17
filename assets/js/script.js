@@ -27,7 +27,8 @@ function partialRender(htmlName,domContentName){
 document.addEventListener('DOMContentLoaded', function() {
     // Todo el DOM ha sido cargado y es seguro manipular los elementos del DOM aquí.
     var base = document.createElement('base');
-    base.href = window.location.origin + '';
+    base.href = window.location.href;
+    console.log(window.location);
     base.target = '_self';
     document.head.appendChild(base);
     runApp();
