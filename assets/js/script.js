@@ -15,7 +15,7 @@ window.addEventListener("scroll", function() {
 });
 
 function partialRender(htmlName,domContentName){
-    fetch("/assets/html/"+ htmlName)
+    fetch("assets/html/"+ htmlName)
             .then(response => response.text())
             .then(data => {
                 // Insertar el contenido recibido en el contenedor
