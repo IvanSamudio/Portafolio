@@ -624,9 +624,10 @@ main {
 .notification {
     display: none; /* Oculta la notificación por defecto */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
+    top: 15%;
+    left: 36%;
+    right: 36%;
+    background-color: var(--dark-color);
     color: #fff;
     padding: 10px;
     border-radius: 5px;

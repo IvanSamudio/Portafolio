@@ -55,7 +55,7 @@ function owlCarouselMain(){
             items: 2,
             margin:30,
             autoplay:true,
-            autoplayTimeout: 4000,
+            autoplayTimeout: 6000,
             responsive:{
                 0:{
                     items:1
@@ -73,7 +73,7 @@ function owlCarouselMain(){
 
 function copyEmail() {
     // Obtener el valor del campo de texto
-    let text = document.getElementById("email").value;
+    let text = "ivansamudio07@gmail.com";
     let notification = document.getElementById("notification");
 
     navigator.clipboard.writeText(text).then(function() {
