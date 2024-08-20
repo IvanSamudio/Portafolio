@@ -44,7 +44,10 @@ function runApp() {
     partialRender("skills.html","skill-section");
     partialRender("portfolio.html","portfolio-section");
     partialRender("social.html","social-section",true);
-
+    $.scrollIt({
+        easing: 'linear',
+        topOffset: -70
+    });
     
 }
 
@@ -55,7 +58,7 @@ function owlCarouselMain(){
             items: 2,
             margin:30,
             autoplay:true,
-            autoplayTimeout: 6000,
+            autoplayTimeout: 9000,
             responsive:{
                 0:{
                     items:1
