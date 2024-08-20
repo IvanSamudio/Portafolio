@@ -40,10 +40,12 @@ function runApp() {
     partialRender("navbar.html","main-header");
     partialRender("home.html","home-section");
     partialRender("about.html","about-section");
-    partialRender("experience.html","experience-section");
+    partialRender("tools.html","tools-section");
     partialRender("skills.html","skill-section");
     partialRender("portfolio.html","portfolio-section");
+    partialRender("portfolio.html","portfolio-section");
     partialRender("social.html","social-section",true);
+    partialRender("contact.html","contact-section");
     $.scrollIt({
         easing: 'linear',
         topOffset: -70

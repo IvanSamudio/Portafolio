@@ -408,7 +408,7 @@ main {
 }
 
 
-/*EXPERIENCIAS*/
+/*HERRAMIENTAS*/
 .section-heading {
     padding-bottom: 60px;
     text-align: center;
@@ -644,6 +644,54 @@ main {
 .notification.hide {
     opacity: 0;
 }
+
+
+
+/*CONTACTO*/
+
+.contact-infos{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-infos li{
+    display: flex;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.contact-infos li:last-child{
+    padding-bottom: 0;
+}
+
+.contact-infos .icon{
+    width: 55px;
+    height: 55px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-color);
+    font-size: 25px;
+}
+
+.contact-infos h5{
+    font-size: 14px;
+    margin: 0 0 5px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-infos p{
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/*FOOTER*/
 
 
 .footer{
