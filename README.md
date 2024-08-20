@@ -24,7 +24,7 @@ Este proyecto es mi portafolio personal, donde presento mi trabajo, habilidades,
 - **JavaScript:** Para interactividad y animaciones.
 - **JQuery:** Para manipulación del DOM y efectos visuales.
 - **Owl Carousel:** Para mostrar proyectos y testimonios en un carrusel interactivo.
-- **scrollIt:** Para animaciones a la hora de pulsar la navbar.
+- **ScrollIt:** Para animaciones a la hora de pulsar la navbar.
 - **GitHub Pages:** Para el despliegue y hosting del portafolio.
 
 ## Proceso de Desarrollo
