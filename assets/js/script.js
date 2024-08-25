@@ -23,7 +23,9 @@ function partialRender(htmlName, domContentName, section = "home") {
             document.querySelector("." + domContentName).innerHTML = data;
             if (section == "navbar") {
                 document.getElementById("language-toggle").addEventListener('change', (e) => readLanguage(e));
-                document.getElementById("mode-toggle").addEventListener('change', (e) => changeMode(e));
+                document.getElementById("mode-toggle").addEventListener('change', (e)=>{
+                    changeMode(e.target.checked);
+                });
                 detectColorScheme();
             } else if (section == "carousel") {
                 owlCarouselMain();
@@ -57,12 +59,32 @@ function runApp() {
     });
 }
 
+//TEMAS
+
 function detectColorScheme(){
     const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (darkMode) {
-        document.getElementById('label-mode-toggle').innerHTML = "<i class='bx bx-sun'></i>";
-        document.documentElement.setAttribute("data-theme", "dark");
+        changeMode(darkMode);
+    }
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    console.log(e.matches);
+    changeMode(e.matches);
+});
+
+function changeMode(checked) {
+    let label_toggle = document.getElementById('label-mode-toggle');
+    if (checked) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+        label_toggle.innerHTML = "<i class='bx bx-sun' ></i>";
         document.getElementById('mode-toggle').checked = true;
+    } else {
+        localStorage.setItem('theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'light');
+        label_toggle.innerHTML = "<i class='bx bx-moon' ></i>";
+        document.getElementById('mode-toggle').checked = false;
     }
 }
 
@@ -120,21 +142,7 @@ function readLanguage(e) {
     }
 }
 
-function changeMode(e) {
-    let checked = e.target.checked;
-    let label_toggle = document.getElementById('label-mode-toggle');
-    if (checked) {
-        localStorage.setItem('theme', 'dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-        label_toggle.innerHTML = "<i class='bx bx-sun' ></i>";
-        checked = true;
-    } else {
-        localStorage.setItem('theme', 'light');
-        document.documentElement.setAttribute('data-theme', 'light');
-        label_toggle.innerHTML = "<i class='bx bx-moon' ></i>";
-        checked = false;
-    }
-}
+
 
 async function changeLenguage(language) {
     const textsToChange = document.querySelectorAll("[data-section]");
