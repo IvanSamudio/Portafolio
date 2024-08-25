@@ -45,7 +45,7 @@ body {
     color: var(--p-color);
 }
 
-.dark-mode{
+[data-theme="dark"]{
     --primary-color: #00ADB5;
     --second-color:#EEEEEE;
     --third-color:#393E46;
