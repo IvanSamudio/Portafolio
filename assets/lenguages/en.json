@@ -1,0 +1,19 @@
+{
+    "navbar":{
+        "about":"about me",
+        "tools":"tools",
+        "skill":"skills",
+        "portfolio":"my projects",
+        "social":"social",
+        "contact":"Contact"
+    },
+    "home":{
+        "name": "Hello, my name is Ivan",
+        "rol": "I am a Developer",
+        "from" : "From Tandil, Province of Buenos Aires, Argentina.",
+        "about":"About me"            
+    },
+    "about":{
+
+    }
+}

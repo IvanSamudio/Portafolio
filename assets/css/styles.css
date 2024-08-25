@@ -22,14 +22,45 @@ https://www.colorhunt.co/palette/222831393e4600adb5eeeeee
 
 
 :root{
-    --primary-color: #00ADB5;
-    --dark-color:#222831;
+    --primary-color: #00ADB5; /*letras nav, fondo botones */
+    --second-color: #222831; /* titulos, sombras e iconos*/
+    --third-color:#fff; /*letras de botones y fondos de icono*/
+    --p-color: #393E46; /*color parrafos*/
+    --border-nav: rgba(55, 55, 55, 0.1);/*bordes nav*/
+    --nav-background: rgba(255, 255, 255, 0.9);/*fondo nav 222831 v*/
+    --background-home: rgba(57, 62, 70,0.1) ;/*fondo home v*/
+    --footer-background: #222831; 
+    --background-secondary:#fff;
+    --card-1:#f3d947;
+    --card-2:#C8C8C8;
+    --card-3:#00CED1;
+    --card-4:#FFA07A;
+    --card-5:#FFB6C1;
+    --card-6:#87CEFA; 
 }
 
 body {
     font-family: "Jost", sans-serif;
     font-weight: 400;
-    color: #393E46;
+    color: var(--p-color);
+}
+
+.dark-mode{
+    --primary-color: #00ADB5;
+    --second-color:#EEEEEE;
+    --third-color:#393E46;
+    --p-color:#A1A1A1;
+    --border-nav:rgba(57, 62, 70, 0.1);
+    --nav-background:rgba(27, 32, 38, 0.9);
+    --background-home:#1B2026;
+    --footer-background:#1B2026;
+    --background-secondary: #282C34;
+    --card-1:#d4cb71be;
+    --card-2:#6e6d6d;
+    --card-3:#036163;
+    --card-4:#724635;
+    --card-5:#79575c;
+    --card-6:#125b88; 
 }
 
 img{
@@ -51,9 +82,39 @@ a:hover {
 }
 
 .text-dark {
-    color: var(--dark-color) !important;
+    color: var(--second-color) !important;
 }
 /* HEADER*/
+
+#language-toggle,#mode-toggle{
+    display: none;
+}
+
+#label-language-toggle{
+    padding: 0 25px;
+    line-height: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+    position: relative;
+    cursor: pointer;
+    transition: ease all 0.6s;
+    font-style: normal;
+}
+
+#label-mode-toggle{
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0 5px;
+    line-height: 35px;
+}
+
+#label-language-toggle:hover, #label-mode-toggle:hover{
+    color: var(--second-color);
+}
 
 .main-header{
     position: fixed;
@@ -108,18 +169,18 @@ a:hover {
 
 @media (max-width:991px) {
     .main-header .navbar-collapse {
-        border-bottom: 2px solid var(--dark-color);
-        border-top: 2px solid var(--dark-color);
+        border-bottom: 2px solid var(--second-color);
+        border-top: 2px solid var(--second-color);
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: #FFF;
+        background: var(--third-color);
     }
 
 
     .main-header .navbar-nav > li + li{
-        border-top: 1px solid rgba(55, 55, 55, 0.1);
+        border-top: 1px solid var(--border-nav);
     }
 
     .main-header .navbar-nav > li > .nav-link {
@@ -142,7 +203,7 @@ a:hover {
     .main-header .navbar-toggler span{
         width: 25px;
         height: 2px;
-        background: var(--dark-color);
+        background: var(--second-color);
         margin: 4px 0;
         transition: 0.3s;
     }
@@ -161,9 +222,9 @@ a:hover {
 }
 
 .fixed-header .main-header{
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--nav-background);
     backdrop-filter: blur(10px);
-    box-shadow: 0 0.125rem 0.25rem rgba(55, 55, 55, 0.7);
+    box-shadow: 0 0.125rem 0.25rem var(--border-nav);
 }
 
 .colored-btn{
@@ -178,47 +239,47 @@ a:hover {
     transition: ease all 0.3s;
     display: inline-block;
     background: var(--primary-color);
-    color: #FFF;
-    box-shadow: 6px 6px 0 var(--dark-color);
+    color: var(--third-color);
+    box-shadow: 6px 6px 0 var(--second-color);
 }
 
 .colored-btn:hover{
-    color: #FFF;
-    background: var(--dark-color);
-    border-color: var(--dark-color);
+    color: var(--third-color);
+    background: var(--second-color);
+    border-color: var(--second-color);
     box-shadow: 5px 5px 0 -2px var(--primary-color);
 }
 
 .bg-gray{
-    background-color: rgba(57, 62, 70,0.1);    
+    background-color: var(--background-home) !important;    
 }
 
 .bg-dark{
-    background-color: var(--dark-color) !important;
+    background-color: var(--second-color) !important;
 }
 
 .bg-1{
-    background: rgb(250, 171, 51);
+    background: var(--card-1);
 }
 
 .bg-2{
-    background: rgb(14, 174, 196);
+    background: var(--card-2);
 }
 
 .bg-3{
-    background: rgb(168, 166, 15);
+    background: var(--card-3);
 }
 
 .bg-4{
-    background: rgb(211, 159, 235);
+    background: var(--card-4);
 }
 
 .bg-5{
-    background: rgb(78, 182, 84);
+    background: var(--card-5);
 }
 
 .bg-6{
-    background: rgb(219, 105, 105);
+    background: var(--card-6);
 }
 
 
@@ -235,6 +296,7 @@ main {
     overflow: hidden;
     padding-top: 150px;
     padding-bottom: 100px;
+    transition: all 1.5s ease !important;
 }
 
 @media (max-width:767px) {
@@ -268,7 +330,7 @@ main {
 
 .home-section .home-intro h6{
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--second-color);
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 16px;
@@ -279,7 +341,7 @@ main {
 .home-section .home-intro h1{
     font-size: 70px;
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--second-color);
     margin: 0 0 35px;
     line-height: 1;
 }
@@ -303,7 +365,7 @@ main {
     width: 450px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--second-color);
     position: relative;
     z-index: -2;
 }
@@ -389,6 +451,8 @@ main {
 .section{
     padding: 100px 0;
     position: relative;
+    background-color: var(--background-secondary);
+    transition: all 1.5s ease !important;
 }
 
 @media (max-width:991px) {
@@ -417,7 +481,7 @@ main {
 .section-heading h3 {
     font-size: 50px;
     margin: 0;
-    color: var(--dark-color);
+    color: var(--second-color);
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -456,14 +520,14 @@ main {
 
 .feature-box h5{
     font-size: 24px;
-    color: var(--dark-color);
+    color: var(--second-color);
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .feature-box p{
     margin: 0;
-    color: var(--dark-color);
+    color: var(--second-color);
     font-size: 17px;
 }
 
@@ -472,21 +536,21 @@ main {
     height: 100px;
     overflow: hidden;
     margin: 0 auto;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--second-color);
 }
 
 /*HABILIDADES*/
 
 .feature-box {
     padding: 40px;
-    border: 2px solid var(--dark-color);
-    box-shadow: 0 0 0 0 var(--dark-color);
+    border: 2px solid var(--second-color);
+    box-shadow: 0 0 0 0 var(--second-color);
     display: flex;
     transition: 0.3s box-shadow;
 }
 
 .feature-box:hover{
-    box-shadow: 5px 5px 0 0 var(--dark-color);
+    box-shadow: 5px 5px 0 0 var(--second-color);
 }
 
 @media (max-width:767px) {
@@ -502,10 +566,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--dark-color);
-    background: #FFF;
-    color: var(--dark-color);
+    border: 2px solid var(--second-color);
+    background: var(--third-color);
+    color: var(--second-color);
     font-size: 32px;
+}
+
+.icon svg{
+    fill: var(--second-color);
+    vertical-align: unset;
 }
 
 .feature-box .iconSocial {
@@ -515,9 +584,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--dark-color);
-    background: #FFF;
-    color: var(--dark-color);
+    border: 2px solid var(--second-color);
+    background: var(--background-secondary);
+    color: var(--second-color);
     font-size: 100px;
 }
 
@@ -527,7 +596,7 @@ main {
 }
 
 .feature-box-small:hover {
-    box-shadow: 3px 3px 0 0 var(--dark-color);
+    box-shadow: 3px 3px 0 0 var(--second-color);
 }
 
 .feature-box .icon {
@@ -537,7 +606,7 @@ main {
 
 .feature-box-small h6 {
     margin: 0;
-    color: var(--dark-color);
+    color: var(--second-color);
     padding-left: 15px;
 }
 
@@ -546,20 +615,20 @@ main {
 
 .portfolio-box .portfolio-img {
     position: relative;
-    border: 2px solid var(--dark-color);
-    box-shadow: 0 0 0 0 var(--dark-color);
+    border: 2px solid var(--second-color);
+    box-shadow: 0 0 0 0 var(--second-color);
     transition: 0.3s;
 }
 
 .portfolio-box .portfolio-img:hover{
-    box-shadow: 5px 5px 0 0 var(--dark-color);
+    box-shadow: 5px 5px 0 0 var(--second-color);
 }
 
 .portfolio-box .portfolio-text span{
     display: inline-block;
     padding: 8px 20px;
     background: rgba(255, 101, 28, 0.2);
-    color: var(--dark-color);
+    color: var(--second-color);
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
@@ -569,7 +638,7 @@ main {
 }
 
 .portfolio-box .portfolio-text h4{
-    color: var(--dark-color);
+    color: var(--second-color);
     font-weight: 600;
     font-size: 32px;
     margin-bottom: 20px;
@@ -598,14 +667,14 @@ main {
     width: 12px;
     height: 12px;
     background: transparent;
-    border: 1px solid var(--dark-color) !important;
+    border: 1px solid var(--second-color) !important;
     transition: ease all 0.55s;
     border-radius: 50%;
     margin: 0 4px;
 }
 
 .owl-dots .owl-dot.active {
-    background: var(--dark-color);
+    background: var(--second-color);
 }
 
 #emailMessage{
@@ -617,7 +686,7 @@ main {
     padding: 0;
     border: 0;
     font-size: 16px;
-    color: var(--dark-color);
+    color: var(--second-color);
 
 }
 
@@ -627,8 +696,8 @@ main {
     top: 80px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--dark-color);
-    color: #fff;
+    background-color: var(--second-color);
+    color: var(--third-color);
     padding: 12px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -648,6 +717,10 @@ main {
 
 
 /*CONTACTO*/
+
+.contact-section{
+    background: var(--footer-background);
+}
 
 .contact-infos{
     margin: 0;
@@ -671,7 +744,7 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--dark-color);
+    color: var(--second-color);
     font-size: 25px;
 }
 
@@ -695,7 +768,7 @@ main {
 
 
 .footer{
-    background-color: var(--dark-color);
+    background-color: var(--footer-background);
     padding-top: 10px;
     padding-bottom: 10px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);

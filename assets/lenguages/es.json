@@ -1,0 +1,20 @@
+{   
+    "navbar":{
+        "about":"Sobre mi",
+        "tools":"Herramientas",
+        "skill":"Habilidades",
+        "portfolio":"Mis proyectos",
+        "social":"social",
+        "contact":"Contacto"
+
+    },
+    "home":{
+        "name": "Hola, Mi nombre es Ivan",
+        "rol": "Soy Programador",
+        "from" : "De Tandil, Provincia de Buenos Aires, Argentina.",
+        "about":"Sobre mi"       
+    },
+    "about":{
+
+    }
+}

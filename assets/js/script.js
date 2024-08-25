@@ -5,6 +5,7 @@
  * Descripción: Este archivo maneja la lógica de la interfaz de usuario de la aplicación.
  */
 
+
 window.addEventListener("scroll", function() {
     var scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop >= 80) {
@@ -14,13 +15,16 @@ window.addEventListener("scroll", function() {
     }
 });
 
-function partialRender(htmlName,domContentName,social = false){
+function partialRender(htmlName,domContentName,section = "home"){
     fetch("assets/html/"+ htmlName)
             .then(response => response.text())
             .then(data => {
                 // Insertar el contenido recibido en el contenedor
                 document.querySelector("."+domContentName).innerHTML = data;
-                if(social){
+                if(section == "navbar"){
+                    document.getElementById("language-toggle").addEventListener('change',(e) => readLanguage(e));
+                    document.getElementById("mode-toggle").addEventListener('change',(e) => changeMode(e));
+                }else if(section == "carousel"){
                     owlCarouselMain();
                 }
             })
@@ -37,14 +41,14 @@ document.addEventListener('DOMContentLoaded', function() {
 // Esta función inicializa la aplicación
 function runApp() {
     // Realiza el partial render de la NavBar
-    partialRender("navbar.html","main-header");
+    partialRender("navbar.html","main-header","navbar");
     partialRender("home.html","home-section");
     partialRender("about.html","about-section");
     partialRender("tools.html","tools-section");
     partialRender("skills.html","skill-section");
     partialRender("portfolio.html","portfolio-section");
     partialRender("portfolio.html","portfolio-section");
-    partialRender("social.html","social-section",true);
+    partialRender("social.html","social-section","carousel");
     partialRender("contact.html","contact-section");
     $.scrollIt({
         easing: 'linear',
@@ -93,3 +97,39 @@ function copyEmail() {
         console.error('Error al copiar: ', error);
     });
 }
+
+
+function readLanguage(e){
+    let checked = e.target.checked;
+    let label_toggle = document.getElementById('label-language-toggle');
+    if(checked){
+        changeLenguage("en");
+        label_toggle.innerHTML = '<i>ES</i>';
+    }else{
+        changeLenguage("es");
+        label_toggle.innerHTML = '<i>EN</i>';
+    }   
+}
+
+function changeMode(e){
+    let checked = e.target.checked;
+    let label_toggle = document.getElementById('label-mode-toggle');
+    document.body.classList.toggle('dark-mode');
+    if(checked){
+        label_toggle.innerHTML = "<i class='bx bx-sun' ></i>";
+    }else{
+        label_toggle.innerHTML = "<i class='bx bx-moon' ></i>";
+        
+    }   
+}
+
+async function changeLenguage(language){
+    const textsToChange = document.querySelectorAll("[data-section]");
+    const requestJson = await fetch('assets/lenguages/' + language  +'.json');
+    const texts = await requestJson.json()
+    for (const textToChange of textsToChange){
+        const section = textToChange.dataset.section;
+        const value = textToChange.dataset.value;
+        textToChange.innerHTML= texts[section][value];
+    }
+} 
