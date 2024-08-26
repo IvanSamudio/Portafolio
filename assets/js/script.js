@@ -147,7 +147,7 @@ function readLanguage(e) {
 async function changeLenguage(language) {
     const textsToChange = document.querySelectorAll("[data-section]");
     const requestJson = await fetch('assets/lenguages/' + language + '.json');
-    const texts = await requestJson.json()
+    const texts = await requestJson.json();
     for (const textToChange of textsToChange) {
         const section = textToChange.dataset.section;
         const value = textToChange.dataset.value;
