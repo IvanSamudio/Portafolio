@@ -28,7 +28,10 @@ function partialRender(htmlName, domContentName) {
 document.addEventListener('DOMContentLoaded', function () {
     // Todo el DOM ha sido cargado y es seguro manipular los elementos del DOM aquí.
     runApp();
-
+    $.scrollIt({
+        easing: 'linear',
+        topOffset: -70
+    });
 });
 
 // Esta función inicializa la aplicación
@@ -50,13 +53,12 @@ async function runApp() {
     ];
     await Promise.all(renderPromises);
     // set del lenguaje correspondiente
-    owlCarouselMain();
 
     // Set del lenguaje correspondiente
     if (languageCode.toLowerCase() == "es") {
         readLanguage(false);
     } else {
-        document.querySelector("#language-toggle").checked=true;
+        document.querySelector("#language-toggle").checked = true;
         readLanguage(true);
     }
     
@@ -68,12 +70,6 @@ async function runApp() {
     document.getElementById("mode-toggle").addEventListener('change', (e) => {
         changeMode(e.target.checked);
     });
-    document.querySelector(".copyEmail").addEventListener("click", copyEmail);
-    $.scrollIt({
-        easing: 'linear',
-        topOffset: -70
-    });
-    
 
 }
 
@@ -108,27 +104,37 @@ function changeMode(checked) {
 }
 
 function owlCarouselMain() {
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        items: 2,
-        margin: 30,
-        autoplay: true,
-        autoplayTimeout: 9000,
-        responsive: {
-            0: {
-                items: 1
-            },
-            900: {
-                items: 2
-            },
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            items: 2,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                900: {
+                    items: 2
+                },
 
-        }
+            }
+        });
     });
+    document.querySelector(".copyEmail").addEventListener("click", copyEmail);
+}
+
+function refreshCarousel() {
+    const $carousel = $('.owl-carousel');
+    $carousel.trigger('refresh.owl.carousel');
+    owlCarouselMain();
 }
 
 
 function copyEmail() {
     // Obtener el valor del campo de texto
+    console.log("holaaa");
     let text = "ivansamudio07@gmail.com";
     let notification = document.getElementById("notification");
 
@@ -172,4 +178,15 @@ async function changeLenguage(language) {
         const value = textToChange.dataset.value;
         textToChange.innerHTML = texts[section][value];
     }
-} 
+    refreshCarousel();
+    refreshRol(texts["home"]["rolname"]);
+    
+}
+
+function refreshRol(rolTexts){
+    var typed = new Typed('#rol-changer', {
+        strings: [rolTexts[0],rolTexts[1]],
+        typeSpeed: 100,
+        loop: true,
+    });
+}

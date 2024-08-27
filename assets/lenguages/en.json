@@ -9,9 +9,14 @@
     },
     "home": {
         "name": "Hello, my name is Ivan",
-        "rol": "I am a <span>Programmer</span>",
+        "rol": "I am a <span id='rol-changer'></span>",
+        "rolname": [
+                "Programmer",
+                "Developer"
+        ],
         "from": "From Tandil, Buenos Aires Province, Argentina.",
-        "about": "About Me"
+        "about": "About Me",
+        "copy-clipboard":"Copied to clipboard"
     },
     "about": {
         "title": "I am a Programmer looking for my first experience",
