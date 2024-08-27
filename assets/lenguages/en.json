@@ -1,19 +1,49 @@
-{
-    "navbar":{
-        "about":"about me",
-        "tools":"tools",
-        "skill":"skills",
-        "portfolio":"my projects",
-        "social":"social",
-        "contact":"Contact"
+{   
+    "navbar": {
+        "about": "About Me",
+        "tools": "Tools",
+        "skill": "Skills",
+        "portfolio": "Projects",
+        "social": "Social",
+        "contact": "Contact"
     },
-    "home":{
+    "home": {
         "name": "Hello, my name is Ivan",
-        "rol": "I am a Developer",
-        "from" : "From Tandil, Province of Buenos Aires, Argentina.",
-        "about":"About me"            
+        "rol": "I am a <span>Programmer</span>",
+        "from": "From Tandil, Buenos Aires Province, Argentina.",
+        "about": "About Me"
     },
-    "about":{
-
+    "about": {
+        "title": "I am a Programmer looking for my first experience",
+        "text": "Hello, how are you?"
+    },
+    "tools": {
+        "title": "Tools"
+    },
+    "skills": {
+        "title": "Skills"
+    },
+    "project": {
+        "title": "PROJECTS",
+        "title-hover-img": "Click to open page",
+        "text-hover-img": "It may take a few seconds to load due to server deployment",
+        "project1-title": "Student Registration",
+        "project1-text": "I was asked to create a system for student registration, where they could enroll in specific courses. In this system, you can check information like the student's seniority in a specific course, whether they are graduated or not, etc. All of this should be done in a REST API.",
+        "project2-title": "Project Title",
+        "project2-text": "Text",
+        "project-code": "Code"
+    },
+    "social": {
+        "title": "MY NETWORKS",
+        "github-text": "You can see all my projects on my GitHub.",
+        "linkedin-text": "You can learn more about me on my LinkedIn.",
+        "cv-text": "You can download my resume.",
+        "mail-text": "You can contact me by email.",
+        "copy": "Copy<i class='bx bxs-copy'></i>"
+    },
+    "contact": {
+        "phone": "Phone",
+        "e-mail": "Email",
+        "place": "Location"
     }
 }

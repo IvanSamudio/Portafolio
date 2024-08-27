@@ -1,20 +1,49 @@
 {   
-    "navbar":{
-        "about":"Sobre mi",
-        "tools":"Herramientas",
-        "skill":"Habilidades",
-        "portfolio":"Mis proyectos",
-        "social":"social",
-        "contact":"Contacto"
-
+    "navbar": {
+        "about": "Sobre mí",
+        "tools": "Herramientas",
+        "skill": "Habilidades",
+        "portfolio": "Proyectos",
+        "social": "Social",
+        "contact": "Contacto"
     },
-    "home":{
-        "name": "Hola, Mi nombre es Ivan",
-        "rol": "Soy Programador",
-        "from" : "De Tandil, Provincia de Buenos Aires, Argentina.",
-        "about":"Sobre mi"       
+    "home": {
+        "name": "Hola, mi nombre es Ivan",
+        "rol": "Soy <span>Programador</span>",
+        "from": "De Tandil, Provincia de Buenos Aires, Argentina.",
+        "about": "Sobre mí"
     },
-    "about":{
-
+    "about": {
+        "title": "Soy un Programador en busca de su primera experiencia",
+        "text": "Hola, ¿cómo estás?"
+    },
+    "tools": {
+        "title": "Herramientas"
+    },
+    "skills": {
+        "title": "Habilidades"
+    },
+    "project": {
+        "title": "PROYECTOS",
+        "title-hover-img": "Haz clic para abrir la página",
+        "text-hover-img": "Puede demorar unos segundos en cargar debido al despliegue del servidor",
+        "project1-title": "Registro de estudiantes",
+        "project1-text": "Se me solicitó realizar un sistema para el registro de estudiantes, en el cual estos últimos podrían inscribirse a determinadas carreras. En dicho sistema se podrán consultar datos como la antigüedad del alumno en determinada carrera, si está graduado o no, etc. Todo esto debería ser realizado en una API REST.",
+        "project2-title": "Título del proyecto",
+        "project2-text": "Texto",
+        "project-code": "Código"
+    },
+    "social": {
+        "title": "MIS REDES",
+        "github-text": "Puedes ver todos mis proyectos en mi GitHub.",
+        "linkedin-text": "Puedes saber más de mí en mi LinkedIn.",
+        "cv-text": "Puedes descargar mi currículum vitae.",
+        "mail-text": "Puedes contactarme por email.",
+        "copy": "Copiar<i class='bx bxs-copy'></i>"
+    },
+    "contact": {
+        "phone": "Teléfono",
+        "e-mail": "Correo electrónico",
+        "place": "Localidad"
     }
 }

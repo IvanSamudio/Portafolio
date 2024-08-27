@@ -700,6 +700,7 @@ main {
     }  
 }
 
+
 .portfolio-box .portfolio-text .colored-btn {
     font-size: 12px;
 } 
@@ -733,7 +734,7 @@ main {
 }
 
 .hoverImg h1{
-    font-size: 55px;
+    font-size: 45px;
     color: var(--second-color);
     padding: 0 5px;
     margin-bottom: 15px;
@@ -747,11 +748,20 @@ main {
 
 .hoverImg > * {
     transform: translateY(25px);
-    transition: transform 0.6s;
+    transition: transform 0.2s;
 }
 
 .hoverImg:hover > * {
     transform: translateY(0px);
+}
+
+@media (max-width:1400px) {
+    .hoverImg h1{
+        font-size: 35px;
+    }
+    .hoverImg p{
+        font-size: 17px;
+    }
 }
 
 /* OWL */
