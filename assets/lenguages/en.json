@@ -1,8 +1,8 @@
-{   
+{
     "navbar": {
         "about": "About Me",
         "tools": "Tools",
-        "skill": "Skills",
+        "skills": "Skills",
         "portfolio": "Projects",
         "social": "Social",
         "contact": "Contact"
@@ -11,16 +11,18 @@
         "name": "Hello, my name is Ivan",
         "rol": "I am a <span id='rol-changer'></span>",
         "rolname": [
-                "Programmer",
-                "Developer"
+            "Programmer",
+            "Developer"
         ],
         "from": "From Tandil, Buenos Aires Province, Argentina.",
         "about": "About Me",
-        "copy-clipboard":"Copied to clipboard"
+        "copy-clipboard": "Copied to clipboard"
     },
     "about": {
-        "title": "I am a Programmer looking for my first experience",
-        "text": "Hello, how are you?"
+        "title": "ABOUT ME",
+        "text-p1": "I am a 24-year-old developer, recently graduated in the Technical Degree in Software Development (TUDAI) from the Faculty of Exact Sciences at the National University of the Center of Buenos Aires Province, Tandil, in November 2023. My academic background has provided me with a solid foundation in modern technologies and agile methodologies, allowing me to adapt easily to the challenges of software development.",
+        "text-p2": "During my internship at the Center for Innovation and Creation of Enterprises (CICE) from December 2023 to February 2024, I had the opportunity to design and develop a web platform for project and entrepreneur management. I worked on both back-end with Spring Boot and MySQL, and front-end using HTML, CSS, and JavaScript. This project, managed using Scrum methodology, allowed me to gain practical experience and better understand team dynamics.",
+        "text-p3": "Although I do not yet have formal work experience, I am highly motivated to continue learning and growing in my career. I am comfortable working in both front-end and back-end roles, and I am eager to contribute to challenging projects where I can apply my skills and continue my professional development. Additionally, I am available full-time to join new teams and contribute to their success."
     },
     "tools": {
         "title": "Tools"
@@ -28,22 +30,38 @@
     "skills": {
         "title": "Skills"
     },
-    "project": {
+    "projects": {
         "title": "PROJECTS",
-        "title-hover-img": "Click to open page",
+        "title-hover-img": "Click to open the page",
         "text-hover-img": "It may take a few seconds to load due to server deployment",
         "project1-title": "Student Registration",
-        "project1-text": "I was asked to create a system for student registration, where they could enroll in specific courses. In this system, you can check information like the student's seniority in a specific course, whether they are graduated or not, etc. All of this should be done in a REST API.",
-        "project2-title": "Project Title",
-        "project2-text": "Text",
+        "project1-text": "I was tasked with creating a system for student registration, allowing students to enroll in specific courses. The system provides information such as the student’s tenure in a course, graduation status, etc. This was implemented as a REST API.",
+        "project2-title": "CSS, Transitions, and Animations",
+        "project2-text": [
+            {
+                "description": "Applied transitions to document elements that change color, size, or position on hover."
+            },
+            {
+                "description": "Implemented a function that applies random transformations to a document element each time it is clicked."
+            },
+            {
+                "description": "Used CSS3 animations to create an analog clock displaying time with moving hour, minute, and second hands."
+            },
+            {
+                "description": "Created a frame-by-frame animation of a walking character from a sprite sheet."
+            },
+            {
+                "description": "Implemented the necessary methods for the character to move across the screen following the mouse pointer."
+            }
+        ],
         "project-code": "Code"
     },
     "social": {
-        "title": "MY NETWORKS",
-        "github-text": "You can see all my projects on my GitHub.",
+        "title": "MY SOCIALS",
+        "github-text": "You can view my projects on my GitHub.",
         "linkedin-text": "You can learn more about me on my LinkedIn.",
         "cv-text": "You can download my resume.",
-        "mail-text": "You can contact me by email.",
+        "mail-text": "You can contact me via email.",
         "copy": "Copy<i class='bx bxs-copy'></i>"
     },
     "contact": {
@@ -52,3 +70,4 @@
         "place": "Location"
     }
 }
+

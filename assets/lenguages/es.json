@@ -2,7 +2,7 @@
     "navbar": {
         "about": "Sobre mí",
         "tools": "Herramientas",
-        "skill": "Habilidades",
+        "skills": "Habilidades",
         "portfolio": "Proyectos",
         "social": "Social",
         "contact": "Contacto"
@@ -19,8 +19,10 @@
         "copy-clipboard":"Copiado al portapapeles"
     },
     "about": {
-        "title": "Soy un Programador en busca de su primera experiencia",
-        "text": "Hola, ¿cómo estás?"
+        "title": "SOBRE MI",
+        "text-p1": "Soy un desarrollador de 24 años, recientemente graduado en la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI) en la Facultad de Ciencias Exactas de la Universidad Nacional del Centro de la Provincia de Buenos Aires, Tandil, en noviembre de 2023. Mi formación académica me ha brindado una sólida base en tecnologías modernas y metodologías ágiles, lo que me permite adaptarme con facilidad a los desafíos del mundo del desarrollo de software.",
+        "text-p2": "Durante mi pasantía en el Centro de Innovación y Creación de Empresas (CICE), de diciembre de 2023 a febrero de 2024, tuve la oportunidad de diseñar y desarrollar una plataforma web para la gestión de proyectos y emprendedores. Trabajé en ambos frentes, tanto en el back-end con Spring Boot y MySQL, como en el front-end utilizando HTML, CSS y JavaScript. Este proyecto, gestionado bajo la metodología Scrum, me permitió adquirir experiencia práctica y comprender mejor las dinámicas de trabajo en equipo.",
+        "text-p3": "Aunque aún no cuento con experiencia laboral formal, estoy altamente motivado para seguir aprendiendo y creciendo en mi carrera. Me siento cómodo trabajando tanto en front-end como en back-end, y estoy dispuesto a colaborar en proyectos desafiantes donde pueda aportar mis habilidades y continuar desarrollándome profesionalmente. Además, tengo disponibilidad full time para unirme a nuevos equipos y contribuir al éxito de sus proyectos."
     },
     "tools": {
         "title": "Herramientas"
@@ -28,14 +30,30 @@
     "skills": {
         "title": "Habilidades"
     },
-    "project": {
+    "projects": {
         "title": "PROYECTOS",
         "title-hover-img": "Haz clic para abrir la página",
         "text-hover-img": "Puede demorar unos segundos en cargar debido al despliegue del servidor",
         "project1-title": "Registro de estudiantes",
         "project1-text": "Se me solicitó realizar un sistema para el registro de estudiantes, en el cual estos últimos podrían inscribirse a determinadas carreras. En dicho sistema se podrán consultar datos como la antigüedad del alumno en determinada carrera, si está graduado o no, etc. Todo esto debería ser realizado en una API REST.",
-        "project2-title": "Título del proyecto",
-        "project2-text": "Texto",
+        "project2-title": "CSS, Transformaciones y Animaciones",
+        "project2-text": [
+            {
+              "description": "Apliqué transiciones a elementos del documento que cambian el color, tamaño o posición cuando se pasa el mouse por encima."
+            },
+            {
+              "description": "Implementé una función que aplica transformaciones aleatorias a un elemento del documento cada vez que se clickea encima."
+            },
+            {
+              "description": "Utilicé animaciones de CSS3 para implementar un reloj analógico que muestra el paso del tiempo moviendo las agujas de hora, minutos y segundos."
+            },
+            {
+              "description": "Generé una animación por cuadros 'keyframe' de un personaje que camina a partir de una tira de imágenes sprite sheet."
+            },
+            {
+              "description": "Implementé los métodos necesarios para que el personaje de la animación pueda moverse por la pantalla siguiendo el puntero del mouse."
+            }
+        ],
         "project-code": "Código"
     },
     "social": {

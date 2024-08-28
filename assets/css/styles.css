@@ -318,6 +318,7 @@ main {
     .home-section .home-intro h1{
         margin: 0 0 25px;
         font-size: 45px;
+        
     }
 
     .home-section .home-intro p{
@@ -327,6 +328,12 @@ main {
     .home-image img{
         height: 300px;
         width: 300px;
+    }
+}
+
+@media (max-width:532px) {
+    .home-section .home-intro h1{
+        height: 120px;
     }
 }
 
